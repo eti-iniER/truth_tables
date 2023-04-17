@@ -5,15 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="truthtable.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="truthtable.js"></script>
     <title>Truth Table Generator</title>
 </head>
 <body>
     <div class="content-container">
-        <h2>Enter your proposition below</h2>
-        <form class="logic-input-container">
-            <input id="logic-input" type="text">
-        </form>
-        <div class="logic-function-container"></div>
+        <h2>Proposition:</h2>
+        <div class="logic-input-container" action="">
+            <input id="logic-input" type="text" autofocus>
+            <button class="submit-button" onclick="evaluateLogicString()">=</button>
+        </div>
+        <div class="logic-operator-container">
+            <button class="logic-operator" onclick="addSymbol('~')">~</button>
+            <button class="logic-operator" onclick="addSymbol('∧')">∧</button>
+            <button class="logic-operator" onclick="addSymbol('∨')">∨</button>
+            <button class="logic-operator" onclick="addSymbol('→')">→</button>
+            <button class="logic-operator" onclick="addSymbol('↔')">↔</button>
+            <button class="logic-operator" onclick="addSymbol('(')">(</button>
+            <button class="logic-operator" onclick="addSymbol(')')">)</button>
+        </div>
     </div>
 </body>
 </html>
