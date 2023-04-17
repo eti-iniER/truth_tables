@@ -21,6 +21,6 @@ function getTokens(string) {
 
 function evaluateLogicString(event) {
     let logicString = inputForm.value.toLowerCase();
-    let tokens = getTokens(logicString);
+    let variables = getTokens(logicString);
     console.log(variables);
 }
