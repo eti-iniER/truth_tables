@@ -1,0 +1,45 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0px;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(forest_sunlight.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: grayscale(10%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-container {
+    width: 80%;
+    height: 80%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(37, 37, 37, 0.747);
+    border: 1px solid rgba(202, 202, 202, 0.103);
+    box-shadow: inset 0px 0px 5px 2px rgba(56, 56, 56, 0.274);
+    color: rgb(219, 219, 219);
+}
+#logic-input {
+    height: 50px;
+    width: 500px;
+    background-color: rgba(99, 99, 99, 0.418);
+    outline: none;
+    border: 1px solid rgba(151, 151, 151, 0.63);
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: "Roboto Mono";
+    color: rgb(241, 241, 241);
+    text-align: center;
+    padding: 10px;
+}
