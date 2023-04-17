@@ -13,7 +13,7 @@
     <div class="content-container">
         <h2>Proposition:</h2>
         <div class="logic-input-container" action="">
-            <input id="logic-input" type="text" autofocus>
+            <input id="logic-input" type="text" autofocus oninput="enteredLogic(this, event)">
             <button class="submit-button" onclick="evaluateLogicString()">=</button>
         </div>
         <div class="logic-operator-container">
@@ -29,7 +29,7 @@
             <p>TIP: Use parentheses if you aren't sure of the order of precedence!</p>
         </div>
         <div class="attribution">
-            <p>Made with ❤️ by Eti-ini Effiong-Robert, April 2023</p>
+            <p>Made with ❤️ by Eti-ini Effiong-Robert in April 2023</p>
         </div>
     </div>
 </body>

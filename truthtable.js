@@ -2,13 +2,19 @@ const OPERATORS = ["∧", "~", "∨", "→", "↔", "(", ")"];
 let inputForm = {};
 window.addEventListener("load", () => {
     inputForm = document.getElementById("logic-input");
+    inputForm.addEventListener("change", () => {
+        inputForm.value = inputForm.value.toLowerCase();
+        console.log("Changed!")
+    });
 })
-
 function addSymbol(char) {
     inputForm.value += char;
     inputForm.focus();
 };
 
+function enteredLogic(element, event) {
+    element.value = element.value.toLowerCase();
+}
 function doLogic(a, b, operator) {
     if (operator === "OR") {
         return (a || b);
