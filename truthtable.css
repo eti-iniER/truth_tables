@@ -18,7 +18,7 @@ body {
 
 .content-container {
     width: 80vw;
-    height: 80wh;
+    height: 80vh;
     margin: 0px;
     display: flex;
     flex-direction: column;
