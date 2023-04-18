@@ -1,4 +1,10 @@
 const OPERATORS = ["∧", "~", "∨", "→", "↔", "(", ")"];
+const NEGATION = "~";
+const CONJUNCTION = "∧";
+const DISJUNCTION = "∨";
+const IMPLICATION = "→";
+const BICONDITIONAL = "↔";
+
 let inputForm = {};
 window.addEventListener("load", () => {
     inputForm = document.getElementById("logic-input");
@@ -15,6 +21,7 @@ function addSymbol(char) {
 function enteredLogic(element, event) {
     element.value = element.value.toLowerCase();
 }
+
 function doLogic(a, b, operator) {
     if (operator === "OR") {
         return (a || b);
@@ -37,12 +44,10 @@ function doLogic(a, b, operator) {
     }
 };
 
-function evaluate(string) {
-    if (string.length == 1) {
-        return Number(string);
-    } else {
-        ;
-    }
+function simplify(string) {
+    /* 
+        This function will split the string based on parentheses
+    */
 }
 
 function getTokens(string) {

@@ -1,6 +1,6 @@
 html {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 body {
     margin: 0px;
@@ -96,10 +96,12 @@ div.logic-input-container {
 }
 .note {
     font-style: italic;
+    text-align: center;
 }
 .attribution {
     font-size: small;
     color: gray;
+    text-align: center;
 }
 @media only screen and (max-width: 1000px) {
     #logic-input {
