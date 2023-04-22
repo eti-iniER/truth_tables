@@ -66,12 +66,21 @@ function getLogicVariables(string) {
     return variables;
 };
 
+function removeWhitespace(string) {
+    let output = []
+    for (let char of string) {
+        if (!["(", ")"].includes(char) && char !== " ") {
+            output.push(char);
+        }
+    }
+    return output;
+}
 logicOperatorContainer.style.display = "None";
 function evaluateLogicString(event) {
     // The main function of the program
     let logicString = inputForm.value
     let variables = getLogicVariables(logicString);
     console.log(variables);
-    let simplified = simplify(logicString);
-    console.log(simplified);
+    let tokens_without_spaces = removeWhitespace(logicString);
+    console.log(tokens_without_spaces);
 }
