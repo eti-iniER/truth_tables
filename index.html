@@ -13,10 +13,10 @@
     <div class="content-container">
         <h2>Proposition:</h2>
         <div class="logic-input-container" action="">
-            <input id="logic-input" type="text" autofocus oninput="enteredLogic(this, event)">
+            <input id="logic-input" type="text" autofocus oninput="makeLowercase(this, event)">
             <button class="submit-button" onclick="evaluateLogicString()">=</button>
         </div>
-        <div class="logic-operator-container">
+        <div id="logic-operator-container" class="logic-operator-container">
             <button class="logic-operator" onclick="addSymbol('~')">~</button>
             <button class="logic-operator" onclick="addSymbol('∧')">∧</button>
             <button class="logic-operator" onclick="addSymbol('∨')">∨</button>
@@ -24,6 +24,35 @@
             <button class="logic-operator" onclick="addSymbol('↔')">↔</button>
             <button class="logic-operator" onclick="addSymbol('(')">(</button>
             <button class="logic-operator" onclick="addSymbol(')')">)</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>p</th>
+                    <th>q</th>
+                    <th>p ∧ q</th>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>T</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>F</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>T</td>
+                    <td>T</td>
+                </tr>
+            </table>
         </div>
         <div class="note">
             <p>TIP: Use parentheses if you aren't sure of the order of precedence!</p>
